@@ -1,0 +1,16 @@
+# Correr Flask con HTTPS usando certificado y clave
+app.run(ssl_context=('cert.pem', 'key.pem'))
+
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return "Hola mundo con HTTPS"
+
+if __name__ == '__main__':
+    app.run(ssl_context=('cert.pem', 'key.pem'), host='0.0.0.0', port=5000)
+

@@ -6,7 +6,7 @@ var tamaño=[];
 //host="http://192.168.0.102:5000/"
 //host="http://10.5.51.17:5000/"
 //host="http://10.5.52.163:5000/"
-host="http://serveradsi:5000/"
+host="https://serveradsi:5000/"
 
 //*****************************
 var idioma=

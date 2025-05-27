@@ -4,7 +4,7 @@ var cb;
 //host="http://127.0.0.1:5000/"
 //host="http://10.5.52.163:5000/"
 //host="http://192.168.1.8:5000/"
-host="http://serveradsi:5000/"
+host="https://serveradsi:5000/"
 clase="js-example-basic form-select form-select-md";
 
 const bloques={
