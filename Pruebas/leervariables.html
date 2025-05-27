@@ -1,0 +1,26 @@
+<div>
+    <button type="button" onclick="console.log(leerVariables('sessionid'));">
+        sessionid
+    </button>
+    <button type="button" onclick="console.log(leerVariables('xyz'));">
+        xyz
+    </button>
+    <button type="button" onclick="console.log(leerVariables('product_id'));">
+        product_id 
+    </button>
+</div>
+<script type="text/javascript">
+    function leerVariables(variable) {
+        q=window.location.search.substring(1);
+        console.log("url",q)
+         var v = q.split("&");
+         console.log(v);
+         for (var i=0; i < v.length; i++) {
+             var p = v[i].split("="); 
+             if (p[0] == variable) {
+                 return p[1];
+             }
+         }
+         return false;
+       }
+</script>

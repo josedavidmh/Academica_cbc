@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nuevaAficion">Nueva Afición: </label> 
+        <input type="text" class="nuevaAficion" id="inputAficion" name="nuevaAficion">
+        <button onclick="añadirAficion()">Añadir Afición</button>
+
+<label for="aficiones">
+        <span>Aficiones: </span>
+        <select name="aficiones" id="aficiones" name="aficiones" multiple>
+          <option value="programar">Programar</option>
+          <option value="leer">Leer</option>
+          <option value="cantar">Cantar</option>
+          <option value="bailar">Bailar</option>
+         </select>           
+      </label>
+
+    
+      <label for="aficiones2">
+        <span>Aficiones2: </span>
+        <select name="aficiones" id="aficiones" multiple name="aficiones">
+          <option value="analizar">analizar</option>
+          <option value="contar">contar</option>
+          <option value="hablar">hablar</option>
+          <option value="bailar">Bailar</option>
+         </select>           
+      </label>
+
+      <script>
+        function añadirAficion(){
+            var a = document.getElementsByName("aficiones")[0];
+            var inputAficion = document.getElementById("inputAficion").value;
+            var option = document.createElement("option");
+            option.text = inputAficion;
+            a.add(option);
+            }
+        </script>
+</body>
+</html>
+
+
+

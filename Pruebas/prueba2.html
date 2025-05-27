@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Gestión </title>
+    <script src="js/app2.js"></script>
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.2/css/bootstrap-select.min.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
+    <title></title>
+</head>
+<body>
+<!-- <select class="selectpicker" data-show-subtext="true" data-live-search="true">
+    <option value='' selected="true">Seleccionar una marca</option>
+    <option value='audi'>Audi</option>
+    <option value='bmw'>BMW</option>
+    <option value='citroen'>Citroen</option>
+    <option value='fiat'>Fiat</option>
+    <option value='ford'>Ford</option>
+    <option value='honda'>Honda</option>
+    <option value='hyundai'>Hyundai</option>
+    <option value='kia'>Kia</option>
+    <option value='mazda'>Mazda</option>
+</select> -->
+<Div id="div1">
+<input type="text" value="7">
+</Div>
+<script>
+    const Listas={
+        "Titulo":['DOCTORADO','ESPECIALIZACION11','ESPECIALIZACION TECNOLOGICA','MAESTRIA']
+    }
+    clase="selectpicker";
+    elemento="E1";
+    campo="Titulo";
+    col="col-md-12";
+    seleccion='MAESTRIA';
+    
+
+    lista_enum(campo,elemento,clase,seleccion,col)
+
+
+    function lista_enum(campo,elemento,clase,seleccion,col){
+        /*combo(campo,id del elemento,clase bootstrap,valor predeterminado)*/ 
+                 var cadena=`<div class='${col}'><label for=${elemento} class="col-form-label">${campo}</label>`             
+                 cadena+=`<select id=${elemento} class='${clase}' data-show-subtext="true" data-live-search="true">`;
+                    for (var i = 0; i < Listas[campo].length; i++) { 
+                    s=""       
+                      if (seleccion== Listas[campo][i])
+                          s="selected"  
+                          cadena+=`<option ${s} value='${Listas[campo][i]}'>${Listas[campo][i]}</option>`;
+                          }
+                    cadena+=`</select></div>`;
+                    document.getElementById('div1').innerHTML+=cadena;
+                    console.log(cadena)
+                      }  
+</script>
+</body>
+</html>
